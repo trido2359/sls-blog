@@ -9,7 +9,7 @@ custom:
     qa: dctri
 #app and org for use with dashboard.serverless.com
 app: sls-blog
-org: dctri211997
+org: trido
 
 provider:
   name: aws
