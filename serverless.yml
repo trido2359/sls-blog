@@ -3,10 +3,20 @@ service: sls-blog
 
 plugins:
   - serverless-offline
+custom:
+  stackName: ${opt:stackName, 'dev'}
+  myProfile:
+    qa: dctri
+#app and org for use with dashboard.serverless.com
+app: sls-blog
+org: dctri211997
 
 provider:
   name: aws
   runtime: nodejs12.x
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'ap-southeast-1'}
+  timeout: ${opt:timeout, 10}
 
 functions:
   helloWorld:

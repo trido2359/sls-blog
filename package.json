@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "offline": "sls offline --stage local"
+    "offline": "sls offline --stage local",
+    "deploy:dev": "sls deploy --stage dev"
   },
   "repository": {
     "type": "git",
