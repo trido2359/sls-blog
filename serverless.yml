@@ -5,6 +5,9 @@ plugins:
   - serverless-offline
 custom:
   stackName: ${opt:stackName, 'dev'}
+  myStage: ${opt:stage, self:provider.stage}
+  myProfile:
+    dev: trido
 #app and org for use with dashboard.serverless.com
 app: sls-blog
 org: trido
