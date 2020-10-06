@@ -12,9 +12,9 @@ org: trido
 provider:
   name: aws
   runtime: nodejs12.x
-  stage: ${opt:stage, 'dev'}
-  region: ${opt:region, 'ap-southeast-1'}
-  timeout: ${opt:timeout, 10}
+  stage: dev
+  region: ap-southeast-1
+  timeout: 10
 
 functions:
   helloWorld:
