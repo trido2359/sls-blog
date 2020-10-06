@@ -3,11 +3,6 @@ service: sls-blog
 
 plugins:
   - serverless-offline
-custom:
-  stackName: ${opt:stackName, 'qa'}
-#app and org for use with dashboard.serverless.com
-app: sls-blog
-org: trido
 
 provider:
   name: aws
