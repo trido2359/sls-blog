@@ -22,6 +22,9 @@ module.exports.registerAccount = async (event, context) => {
             body: JSON.stringify({ accountId: result.UserSub})
         };
     } catch (err) {
+        console.log('err register');
+        console.log(err);
+        
         const { code } = err;
         switch (code) {
             case 'UsernameExistsException':
