@@ -43,9 +43,9 @@ module.exports.registerAccount = async (event, context) => {
 
 module.exports.helloWorld = async (event, context) => {
     console.log('hello1');
-    console.log(process.env.abc);
+    console.log(process.env.COGNITO_CLIENT_ID);
     return {
         statusCode: 200,
-        body: process.env.abc + ''
+        body: process.env.COGNITO_CLIENT_ID + ''
     };
 };
