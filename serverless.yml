@@ -3,13 +3,16 @@ service: sls-blog
 
 plugins:
   - serverless-offline
+custom:
+    env: ${file(./serverless.${self:provider.stage}.env.yml)}
 
 provider:
   name: aws
   runtime: nodejs12.x
-  stage: dev
+  stage: ${opt:stage, 'dev'}
   region: ap-southeast-1
   timeout: 10
+  environment: ${self:custom.env}
 
 functions:
   helloWorld:
@@ -18,3 +21,9 @@ functions:
       - http:
           path: api/hello
           method: GET
+  registerAccount:
+    handler: handler.registerAccount
+    events:
+      - http:
+          path: api/account
+          method: post
